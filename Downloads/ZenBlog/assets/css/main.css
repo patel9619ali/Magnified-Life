@@ -501,6 +501,9 @@ transition: transform .7s ease,-webkit-transform .7s ease;
   color: #8a8888;
   font-family: 'FuturaStd-Medium';
   letter-spacing: 0.5px;
+  text-align: left;
+  padding-left: 12px;
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
@@ -1334,11 +1337,84 @@ transition: transform .7s ease,-webkit-transform .7s ease;
 {
     color: white;
     position: absolute!important;
-    bottom: 21px;
+    bottom: 16px;
+    left: 5px;
+    z-index: 2;
+    background-color: #eeeef5;
+    color: #000042;
     font-size: 12px;
-    left: 0;
-    background: grey;
-    padding: 2px;
-    border: 1px solid black;
-    border-radius: 37%;
+    font-weight: 700;
+    height: 32px;
+    padding: 8px 12px;
+    border-radius: 99px;
   }
+  .color_one{
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(0,0,0);
+    background-color: #000;
+    border-radius: 50%;
+    margin-right: 3px;
+  }
+  .color_two{
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(192,192,192);
+    background-color: #c0c0c0 ;
+    border-radius: 50%;
+    margin-right: 3px;
+  }
+  .color_three{
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(255,215,0);
+    background-color: #ffd700;
+    border-radius: 50%;
+    margin-right: 3px;
+  }
+  .color_four{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #b87332;
+    background-color: #b87332;
+    border-radius: 50%;
+    margin-right: 3px;
+  }
+  
+  .color_five{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #a52a2a;
+    background-color: #a52a2a;
+    border-radius: 50%;
+    margin-right: 3px;
+  }
+  .color_six{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #119be3;
+    background-color: #119be3;
+    border-radius: 50%;
+    margin-right: 3px;
+  }
+  .color_seven{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #00ff00;
+    background-color: #00ff00;
+    border-radius: 50%;
+    margin-right: 3px;
+  }
+  .color_eight{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #0000ff;
+    background-color: #0000ff;
+    border-radius: 50%;
+    margin-right: 3px;
+  }
+  
+.bottom_content_cards > p {
+  text-align: start;
+  padding-left: 12px;
+}
