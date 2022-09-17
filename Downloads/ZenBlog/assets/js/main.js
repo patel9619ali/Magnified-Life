@@ -1,9 +1,3 @@
-/**
-* Template Name: ZenBlog - v1.2.0
-* Template URL: https://bootstrapmade.com/zenblog-bootstrap-blog-template/
-* Author: BootstrapMade.com
-* License: https:///bootstrapmade.com/license/
-*/
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -171,4 +165,56 @@ document.addEventListener('DOMContentLoaded', () => {
     aos_init();
   });
 
+  let colorGlass = document.querySelectorAll('.color_glass');
+  let changeImages = document.querySelector('.change_images');
+  let changeImagesSecond = document.querySelector('.change_images_second');
+  let changeImagesThird = document.querySelector('.change_images_third');
+  let changeImagesForth = document.querySelector('.change_images_four');
+  let changeImagesFifth = document.querySelector('.change_images_five');
+  colorGlass.forEach(function(element){
+    element.addEventListener('mouseover', function(){
+      let cardList =  element.parentElement;
+      let myDivObjBgColor = getComputedStyle(element).backgroundColor;
+      let newSrc = changeImages.src;
+      let newSecondSrc = changeImagesSecond.src;
+      let newThirdSrc = changeImagesThird.src;
+      let newForthSrc = changeImagesForth.src;
+      let newFifthSrc = changeImagesFifth.src;
+      function convert(rgb) {
+        if (/^#[0-9A-F]{6}$/i.test(rgb)) return rgb;
+
+        rgb = rgb.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+
+        function hexCode(i) {
+            return ("0" + parseInt(i).toString(16)).slice(-2);
+        }
+        return  hexCode(rgb[1]) + hexCode(rgb[2])
+                + hexCode(rgb[3]);
+    }
+    function GFG_Fun() {
+       let hexCodedImage = convert(myDivObjBgColor);
+       if (cardList.classList.contains('first_card')) {
+         newSrc = `assets/img/glass_vincent_${hexCodedImage}.jpg`;
+         changeImages.src = newSrc;
+        }
+        else if(cardList.classList.contains('second_card')){
+          newSecondSrc = `assets/img/vincent_circle_${hexCodedImage}.jpg`;
+          changeImagesSecond.src = newSecondSrc;
+        }
+        else if(cardList.classList.contains('third_card')){
+          newThirdSrc = `assets/img/matte_rim_${hexCodedImage}.jpg`;
+          changeImagesThird.src = newThirdSrc;
+        }
+        else if(cardList.classList.contains('four_card')){
+          newForthSrc = `assets/img/sports_glasses_${hexCodedImage}.jpg`;
+          changeImagesForth.src = newForthSrc;
+        }
+        else if(cardList.classList.contains('five_card')){
+          newFifthSrc = `assets/img/half_rim_${hexCodedImage}.jpg`;
+          changeImagesFifth.src = newFifthSrc;
+        }
+    }
+      GFG_Fun();
+    })
+  })
 });
